@@ -4,12 +4,16 @@ import {
   globalErrorHandler,
   mongoValidationErrorHandler,
 } from "./middleware/errorMiddlewares.js";
-import { routeNotFound } from "./middleware/middlewares.js";
+import {
+  routeNotFound,
+  databaseDisconnectedHandler,
+} from "./middleware/middlewares.js";
 import indexRouter from "./router/index.router.js";
 
 const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(databaseDisconnectedHandler);
 app.use("/api/users", indexRouter);
 app.use(routeNotFound);
 // error middlewares

@@ -1,6 +1,6 @@
 import app from "./app.js";
-import database from "./database.js";
+import connectToDatabase from "./database.js";
 
-database();
+export const databaseConnectedPromise = connectToDatabase();
 const port = process.env.port || 3000;
 app.listen(port, () => console.log(`>>> Server runnin at ${port}`));

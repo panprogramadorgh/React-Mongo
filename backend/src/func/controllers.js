@@ -4,7 +4,6 @@ import {
   insertMany,
   deleteMany,
   updateMany,
-  checkUserModelProperties,
 } from "../func/utils.js";
 
 export const getUsers = async (req, res, next) => {
