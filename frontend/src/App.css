@@ -1,0 +1,22 @@
+.navegation-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #222427;
+}
+
+.navegation-bar .Link {
+  background-color: #aaa;
+  color: #000;
+  padding: 10px;
+  margin-left: 40px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navegation-bar .Link:hover {
+  border-radius: 0.5em;
+  background-color: #ddd;
+}
