@@ -2,10 +2,13 @@ import { connect } from "mongoose";
 
 export default async function connectToDatabase() {
   try {
-    await connect("mongodb://127.0.0.1/react-app", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await connect(
+      "mongodb+srv://alvarobt7:AZSrAlW1RweC384Q@cluster0.zuv5x64.mongodb.net/users-manager",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
     console.log(`>>> Connected to database`);
     return true;
   } catch (error) {
